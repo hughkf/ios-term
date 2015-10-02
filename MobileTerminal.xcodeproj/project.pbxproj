@@ -43,8 +43,13 @@
 		2C4E1A91101D3182004CA39E /* libPreferences.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C11C9C91014035800A2746E /* libPreferences.a */; };
 		2C66C084101C47FB00E4189B /* MenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C66C083101C47FB00E4189B /* MenuView.m */; };
 		2C66C156101C54C800E4189B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C66C155101C54C800E4189B /* QuartzCore.framework */; };
-		7F09F5C51BA90D75003BD92D /* CommandLineInterpreter.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7F09F5C41BA90D75003BD92D /* CommandLineInterpreter.mm */; settings = {COMPILER_FLAGS = "-Wno-write-strings"; }; };
+		7F04AFD11BBEF3D10079B07C /* fish.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7F94062C1BBED840005CCF09 /* fish.cpp */; };
+		7F04AFD31BBEF6510079B07C /* event.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7F04AFD21BBEF5E50079B07C /* event.cpp */; };
+		7F04AFD71BBEFE5C0079B07C /* Settings.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C11CC7E10159F7400A2746E /* Settings.h */; };
+		7F09F5C51BA90D75003BD92D /* CommandLineInterpreter.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7F09F5C41BA90D75003BD92D /* CommandLineInterpreter.mm */; };
 		7F907F691BA4C81400FF2146 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F907F681BA4C81400FF2146 /* Default-568h@2x.png */; };
+		7F9406501BBEDBA9005CCF09 /* CommandLineInterpreter.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7F09F5C41BA90D75003BD92D /* CommandLineInterpreter.mm */; };
+		7F9406521BBEE1A7005CCF09 /* fish.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7F94062C1BBED840005CCF09 /* fish.cpp */; };
 		7FF733741BAA3BDD00AE8C91 /* CommandTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FF733731BAA3BDD00AE8C91 /* CommandTextView.m */; };
 		9F24A70111D7C6EF00E6EFC0 /* MenuSettingsViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F24A6FF11D7C6EF00E6EFC0 /* MenuSettingsViewController.h */; };
 		9F24A70211D7C6EF00E6EFC0 /* MenuSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F24A70011D7C6EF00E6EFC0 /* MenuSettingsViewController.m */; };
@@ -209,6 +214,9 @@
 		2C66C155101C54C800E4189B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		2C72B2BC101ABA9100F10E63 /* PreferencesTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PreferencesTests-Info.plist"; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* MobileTerminal_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobileTerminal_Prefix.pch; sourceTree = "<group>"; };
+		7F04AFD21BBEF5E50079B07C /* event.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = event.cpp; sourceTree = "<group>"; };
+		7F04AFD41BBEF6B90079B07C /* signal.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = signal.cpp; sourceTree = "<group>"; };
+		7F04AFD51BBEF6B90079B07C /* signal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = signal.h; sourceTree = "<group>"; };
 		7F05BE441BB1A99900572966 /* lib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = lib.a; path = "../../../../busybox-osx/coreutils/lib.a"; sourceTree = "<group>"; };
 		7F0624891BB1BAD60069B7B7 /* lib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = lib.a; path = "../../../../busybox-osx/coreutils/libcoreutils/lib.a"; sourceTree = "<group>"; };
 		7F09F5C31BA90D75003BD92D /* CommandLineInterpreter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CommandLineInterpreter.h; path = Terminal/CommandLineInterpreter.h; sourceTree = "<group>"; };
@@ -237,6 +245,25 @@
 		7F9406281BBED2FE005CCF09 /* common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = common.h; sourceTree = "<group>"; };
 		7F9406291BBED2FE005CCF09 /* fallback.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = fallback.h; sourceTree = "<group>"; };
 		7F94062A1BBED2FE005CCF09 /* io.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = io.h; sourceTree = "<group>"; };
+		7F94062C1BBED840005CCF09 /* fish.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = fish.cpp; sourceTree = "<group>"; };
+		7F94062E1BBED8E7005CCF09 /* reader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = reader.h; sourceTree = "<group>"; };
+		7F94062F1BBED936005CCF09 /* function.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = function.h; sourceTree = "<group>"; };
+		7F9406301BBED936005CCF09 /* wutil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wutil.h; sourceTree = "<group>"; };
+		7F9406331BBED97F005CCF09 /* env.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = env.h; sourceTree = "<group>"; };
+		7F9406341BBED97F005CCF09 /* expand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expand.h; sourceTree = "<group>"; };
+		7F9406351BBED97F005CCF09 /* intern.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = intern.h; sourceTree = "<group>"; };
+		7F9406361BBED97F005CCF09 /* parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = parser.h; sourceTree = "<group>"; };
+		7F9406371BBED97F005CCF09 /* proc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = proc.h; sourceTree = "<group>"; };
+		7F94063D1BBED9EB005CCF09 /* fish_version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fish_version.h; sourceTree = "<group>"; };
+		7F94063E1BBED9EB005CCF09 /* input.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = input.h; sourceTree = "<group>"; };
+		7F9406411BBEDA1F005CCF09 /* complete.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = complete.h; sourceTree = "<group>"; };
+		7F9406431BBEDA40005CCF09 /* highlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = highlight.h; sourceTree = "<group>"; };
+		7F9406451BBEDA5D005CCF09 /* color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = color.h; sourceTree = "<group>"; };
+		7F9406471BBEDA85005CCF09 /* parse_constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = parse_constants.h; sourceTree = "<group>"; };
+		7F9406491BBEDA9E005CCF09 /* parse_tree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = parse_tree.h; sourceTree = "<group>"; };
+		7F94064B1BBEDAB3005CCF09 /* tokenizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tokenizer.h; sourceTree = "<group>"; };
+		7F94064D1BBEDADC005CCF09 /* input_common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = input_common.h; sourceTree = "<group>"; };
+		7F9406511BBEDF11005CCF09 /* fish_directories.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = fish_directories.h; sourceTree = "<group>"; };
 		7F9FD8C71BB2201400D30A9F /* coreutils.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = coreutils.a; path = "../../../../busybox-osx/coreutils/coreutils.a"; sourceTree = "<group>"; };
 		7FEEF2DF1BBC6234008DAD68 /* built-in.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "built-in.o"; path = "../../../../busybox-osx/coreutils/built-in.o"; sourceTree = "<group>"; };
 		7FEEF2E21BBC6579008DAD68 /* libcoreutils.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcoreutils.a; path = "../../../../busybox-osx/coreutils/libcoreutils.a"; sourceTree = "<group>"; };
@@ -494,6 +521,9 @@
 		2C11C9111013F84000A2746E /* Terminal */ = {
 			isa = PBXGroup;
 			children = (
+				7F9406281BBED2FE005CCF09 /* common.h */,
+				7F9406511BBEDF11005CCF09 /* fish_directories.h */,
+				7F94062C1BBED840005CCF09 /* fish.cpp */,
 				7FF733721BAA3BDD00AE8C91 /* CommandTextView.h */,
 				7FF733731BAA3BDD00AE8C91 /* CommandTextView.m */,
 				7F09F5C31BA90D75003BD92D /* CommandLineInterpreter.h */,
@@ -542,7 +572,26 @@
 		7F2C582C1BBDEC8F00F1BFF2 /* Shell */ = {
 			isa = PBXGroup;
 			children = (
-				7F9406281BBED2FE005CCF09 /* common.h */,
+				7F04AFD41BBEF6B90079B07C /* signal.cpp */,
+				7F04AFD51BBEF6B90079B07C /* signal.h */,
+				7F04AFD21BBEF5E50079B07C /* event.cpp */,
+				7F94064D1BBEDADC005CCF09 /* input_common.h */,
+				7F94064B1BBEDAB3005CCF09 /* tokenizer.h */,
+				7F9406491BBEDA9E005CCF09 /* parse_tree.h */,
+				7F9406471BBEDA85005CCF09 /* parse_constants.h */,
+				7F9406451BBEDA5D005CCF09 /* color.h */,
+				7F9406431BBEDA40005CCF09 /* highlight.h */,
+				7F9406411BBEDA1F005CCF09 /* complete.h */,
+				7F94063D1BBED9EB005CCF09 /* fish_version.h */,
+				7F94063E1BBED9EB005CCF09 /* input.h */,
+				7F9406331BBED97F005CCF09 /* env.h */,
+				7F9406341BBED97F005CCF09 /* expand.h */,
+				7F9406351BBED97F005CCF09 /* intern.h */,
+				7F9406361BBED97F005CCF09 /* parser.h */,
+				7F9406371BBED97F005CCF09 /* proc.h */,
+				7F94062F1BBED936005CCF09 /* function.h */,
+				7F9406301BBED936005CCF09 /* wutil.h */,
+				7F94062E1BBED8E7005CCF09 /* reader.h */,
 				7F9406291BBED2FE005CCF09 /* fallback.h */,
 				7F94062A1BBED2FE005CCF09 /* io.h */,
 				7F9406151BBED277005CCF09 /* builtin_commandline.cpp */,
@@ -614,6 +663,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F04AFD71BBEFE5C0079B07C /* Settings.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -854,6 +904,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F04AFD11BBEF3D10079B07C /* fish.cpp in Sources */,
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* MobileTerminalAppDelegate.m in Sources */,
 				28D7ACF80DDB3853001CB0EB /* MobileTerminalViewController.mm in Sources */,
@@ -894,10 +945,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F04AFD31BBEF6510079B07C /* event.cpp in Sources */,
+				7F9406521BBEE1A7005CCF09 /* fish.cpp in Sources */,
 				2C11C9391013F89B00A2746E /* TerminalGroupView.mm in Sources */,
 				2C11C93A1013F89B00A2746E /* TerminalKeyboard.mm in Sources */,
 				2C11C93B1013F89B00A2746E /* TerminalView.mm in Sources */,
 				9F86D6D0123DDE0C00FAA3C4 /* UITextInputBase.m in Sources */,
+				7F9406501BBEDBA9005CCF09 /* CommandLineInterpreter.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1107,7 +1161,7 @@
 				GCC_THUMB_SUPPORT = NO;
 				HEADER_SEARCH_PATHS = "$(SRCROOT)/Classes";
 				INSTALL_PATH = /Users/user1/Downloads;
-				LIBRARY_SEARCH_PATHS = "/Users/user1/Documents/DEV/busybox-osx/coreutils";
+				LIBRARY_SEARCH_PATHS = "";
 				"LIBRARY_SEARCH_PATHS[arch=*]" = "/Users/user1/Documents/DEV/busybox-osx/coreutils";
 				PREBINDING = NO;
 				PRODUCT_NAME = Terminal;
@@ -1125,7 +1179,7 @@
 				GCC_THUMB_SUPPORT = NO;
 				HEADER_SEARCH_PATHS = "$(SRCROOT)/Classes";
 				INSTALL_PATH = /Users/user1/Downloads;
-				LIBRARY_SEARCH_PATHS = "/Users/user1/Documents/DEV/busybox-osx/coreutils";
+				LIBRARY_SEARCH_PATHS = "";
 				"LIBRARY_SEARCH_PATHS[arch=*]" = "/Users/user1/Documents/DEV/busybox-osx/coreutils";
 				PREBINDING = NO;
 				PRODUCT_NAME = Terminal;
