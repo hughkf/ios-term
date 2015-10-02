@@ -925,6 +925,6 @@ extern "C" {
     __attribute__((noinline)) void debug_thread_error(void);
 }
 
-int process_cmdline(int argc, char **argv);
+int fish_main(int argc, char **argv);
 
 #endif

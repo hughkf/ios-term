@@ -46,10 +46,10 @@ char* join_strings(char* strings[], char* separator, int count) {
 
 - (const char*)interpretCommand:(char**)cmd_args : (const char*)cmd : (int) length {
 
-    if (strcmp("ls", cmd_args[0]) == 0) {
-        process_cmdline(length, cmd_args);
-        return NULL;
-    }
+//    if (strcmp("ls", cmd_args[0]) == 0) {
+//        return fish_main(length, cmd_args);
+//    }
+//    const char ret_str[] = "\r\n Unknown command!";
 
     if (strcmp("exit", cmd_args[0]) == 0) {
         exit(EXIT_SUCCESS);
