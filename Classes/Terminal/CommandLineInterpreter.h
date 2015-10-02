@@ -4,7 +4,7 @@
 //  Created by Hugh Krogh-Freeman on 9/15/15.
 
 #import <Foundation/Foundation.h>
-//#import "common.h"
+#include "common.h"
 #import "TerminalView.h"
 
 @class TerminalView;
@@ -17,6 +17,7 @@
 
 - (id)init: (TerminalView*) t;
 - (void)dealloc;
-- (char*)interpretCommand:(char**)cmd_args : (const char*)cmd : (int) length;
+- (const char*)interpretCommand:(char**)cmd_args : (const char*)cmd : (int) length;
+- (char*) string_literal: (const char*) str;
 
 @end

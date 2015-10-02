@@ -14,7 +14,7 @@
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		2899E5220DE3E06400AC0155 /* MobileTerminalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2899E5210DE3E06400AC0155 /* MobileTerminalViewController.xib */; };
 		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
-		28D7ACF80DDB3853001CB0EB /* MobileTerminalViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* MobileTerminalViewController.mm */; };
+		28D7ACF80DDB3853001CB0EB /* MobileTerminalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* MobileTerminalViewController.m */; };
 		2C11C5801013A54300A2746E /* VT100Terminal.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C11C5661013A4E500A2746E /* VT100Terminal.m */; };
 		2C11C5811013A54300A2746E /* VT100TextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C11C5671013A4E500A2746E /* VT100TextView.m */; };
 		2C11C5821013A54300A2746E /* VT100.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C11C5691013A4E500A2746E /* VT100.m */; };
@@ -30,9 +30,9 @@
 		2C11C6691013AE0F00A2746E /* VT100TextView.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C11C56D1013A4E500A2746E /* VT100TextView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2C11C66A1013AE1D00A2746E /* SubProcess.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C11C55D1013A4DC00A2746E /* SubProcess.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2C11C66B1013AE1D00A2746E /* PTY.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C11C55F1013A4DC00A2746E /* PTY.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2C11C9391013F89B00A2746E /* TerminalGroupView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2C11C9261013F85A00A2746E /* TerminalGroupView.mm */; };
-		2C11C93A1013F89B00A2746E /* TerminalKeyboard.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2C11C9281013F85A00A2746E /* TerminalKeyboard.mm */; };
-		2C11C93B1013F89B00A2746E /* TerminalView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2C11C92A1013F85A00A2746E /* TerminalView.mm */; };
+		2C11C9391013F89B00A2746E /* TerminalGroupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C11C9261013F85A00A2746E /* TerminalGroupView.m */; };
+		2C11C93A1013F89B00A2746E /* TerminalKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C11C9281013F85A00A2746E /* TerminalKeyboard.m */; };
+		2C11C93B1013F89B00A2746E /* TerminalView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C11C92A1013F85A00A2746E /* TerminalView.m */; };
 		2C11C95A1013F9B600A2746E /* libTerminal.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C11C9321013F87100A2746E /* libTerminal.a */; };
 		2C11CC8210159F7400A2746E /* Settings.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C11CC7E10159F7400A2746E /* Settings.h */; settings = {ATTRIBUTES = (); }; };
 		2C11CC8310159F7400A2746E /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C11CC7F10159F7400A2746E /* Settings.m */; };
@@ -43,7 +43,10 @@
 		2C4E1A91101D3182004CA39E /* libPreferences.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C11C9C91014035800A2746E /* libPreferences.a */; };
 		2C66C084101C47FB00E4189B /* MenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C66C083101C47FB00E4189B /* MenuView.m */; };
 		2C66C156101C54C800E4189B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C66C155101C54C800E4189B /* QuartzCore.framework */; };
-		7F09F5C51BA90D75003BD92D /* CommandLineInterpreter.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7F09F5C41BA90D75003BD92D /* CommandLineInterpreter.mm */; settings = {COMPILER_FLAGS = "-Wno-write-strings"; }; };
+		7F09F5C51BA90D75003BD92D /* CommandLineInterpreter.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F09F5C41BA90D75003BD92D /* CommandLineInterpreter.m */; };
+		7F12CE7E1BBDB95000111A8E /* UITextInputBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F86D6CE123DDE0C00FAA3C4 /* UITextInputBase.m */; };
+		7F12CE7F1BBDB9C800111A8E /* GestureActionRegistry.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F6B6D9812297822007BAD59 /* GestureActionRegistry.m */; };
+		7F2C582B1BBDE97100F1BFF2 /* Settings.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C11CC7E10159F7400A2746E /* Settings.h */; };
 		7F907F691BA4C81400FF2146 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F907F681BA4C81400FF2146 /* Default-568h@2x.png */; };
 		7FF733741BAA3BDD00AE8C91 /* CommandTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FF733731BAA3BDD00AE8C91 /* CommandTextView.m */; };
 		9F24A70111D7C6EF00E6EFC0 /* MenuSettingsViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F24A6FF11D7C6EF00E6EFC0 /* MenuSettingsViewController.h */; };
@@ -63,12 +66,10 @@
 		9F6B6D5912297452007BAD59 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F6B6D5712297452007BAD59 /* Icon-72.png */; };
 		9F6B6D5A12297452007BAD59 /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F6B6D5812297452007BAD59 /* Icon-Small-50.png */; };
 		9F6B6D7E12297740007BAD59 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F6B6D7D12297740007BAD59 /* Default.png */; };
-		9F6B6D9912297822007BAD59 /* GestureActionRegistry.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F6B6D9812297822007BAD59 /* GestureActionRegistry.m */; };
 		9F6B6E481229A71E007BAD59 /* GestureInputActions.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9F6B6E311229A55B007BAD59 /* GestureInputActions.plist */; };
 		9F74BF7111D326890013DA87 /* PreferencesViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F74BF6F11D326890013DA87 /* PreferencesViewController.h */; };
 		9F74BF7211D326890013DA87 /* PreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F74BF7011D326890013DA87 /* PreferencesViewController.m */; };
 		9F86D380123D386A00FAA3C4 /* PreferencesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F86D37F123D386A00FAA3C4 /* PreferencesViewController.xib */; };
-		9F86D6D0123DDE0C00FAA3C4 /* UITextInputBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F86D6CE123DDE0C00FAA3C4 /* UITextInputBase.m */; };
 		9FA68B8E124693D4002B893E /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FA68B8D124693D4002B893E /* CoreText.framework */; };
 		9FB73ED911C476BA005E3764 /* MainWindow-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FB73ED811C476BA005E3764 /* MainWindow-iPad.xib */; };
 		9FD244F5121790AF009A71C6 /* GestureSettings.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FD244F3121790AF009A71C6 /* GestureSettings.h */; };
@@ -162,7 +163,7 @@
 		2899E5210DE3E06400AC0155 /* MobileTerminalViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MobileTerminalViewController.xib; sourceTree = "<group>"; };
 		28AD733E0D9D9553002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
 		28D7ACF60DDB3853001CB0EB /* MobileTerminalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobileTerminalViewController.h; sourceTree = "<group>"; };
-		28D7ACF70DDB3853001CB0EB /* MobileTerminalViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MobileTerminalViewController.mm; sourceTree = "<group>"; };
+		28D7ACF70DDB3853001CB0EB /* MobileTerminalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MobileTerminalViewController.m; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2C11C54E1013A4C800A2746E /* ColorMapTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ColorMapTest.m; path = Tests/ColorMapTest.m; sourceTree = "<group>"; };
 		2C11C54F1013A4C800A2746E /* VT100Test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VT100Test.h; path = Tests/VT100Test.h; sourceTree = "<group>"; };
@@ -189,11 +190,11 @@
 		2C11C5B41013A5AF00A2746E /* VT100Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "VT100Tests-Info.plist"; sourceTree = "<group>"; };
 		2C11C6461013AC7400A2746E /* libcurses.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcurses.dylib; path = usr/lib/libcurses.dylib; sourceTree = SDKROOT; };
 		2C11C9251013F85A00A2746E /* TerminalGroupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TerminalGroupView.h; path = Terminal/TerminalGroupView.h; sourceTree = "<group>"; };
-		2C11C9261013F85A00A2746E /* TerminalGroupView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = TerminalGroupView.mm; path = Terminal/TerminalGroupView.mm; sourceTree = "<group>"; };
+		2C11C9261013F85A00A2746E /* TerminalGroupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TerminalGroupView.m; path = Terminal/TerminalGroupView.m; sourceTree = "<group>"; };
 		2C11C9271013F85A00A2746E /* TerminalKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TerminalKeyboard.h; path = Terminal/TerminalKeyboard.h; sourceTree = "<group>"; };
-		2C11C9281013F85A00A2746E /* TerminalKeyboard.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = TerminalKeyboard.mm; path = Terminal/TerminalKeyboard.mm; sourceTree = "<group>"; };
+		2C11C9281013F85A00A2746E /* TerminalKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TerminalKeyboard.m; path = Terminal/TerminalKeyboard.m; sourceTree = "<group>"; };
 		2C11C9291013F85A00A2746E /* TerminalView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TerminalView.h; path = Terminal/TerminalView.h; sourceTree = "<group>"; };
-		2C11C92A1013F85A00A2746E /* TerminalView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = TerminalView.mm; path = Terminal/TerminalView.mm; sourceTree = "<group>"; };
+		2C11C92A1013F85A00A2746E /* TerminalView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TerminalView.m; path = Terminal/TerminalView.m; sourceTree = "<group>"; };
 		2C11C9321013F87100A2746E /* libTerminal.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTerminal.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C11C9C91014035800A2746E /* libPreferences.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPreferences.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C11CC7E10159F7400A2746E /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Settings.h; path = Preferences/Settings.h; sourceTree = "<group>"; };
@@ -212,31 +213,20 @@
 		7F05BE441BB1A99900572966 /* lib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = lib.a; path = "../../../../busybox-osx/coreutils/lib.a"; sourceTree = "<group>"; };
 		7F0624891BB1BAD60069B7B7 /* lib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = lib.a; path = "../../../../busybox-osx/coreutils/libcoreutils/lib.a"; sourceTree = "<group>"; };
 		7F09F5C31BA90D75003BD92D /* CommandLineInterpreter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CommandLineInterpreter.h; path = Terminal/CommandLineInterpreter.h; sourceTree = "<group>"; };
-		7F09F5C41BA90D75003BD92D /* CommandLineInterpreter.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = CommandLineInterpreter.mm; path = Terminal/CommandLineInterpreter.mm; sourceTree = "<group>"; };
+		7F09F5C41BA90D75003BD92D /* CommandLineInterpreter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CommandLineInterpreter.m; path = Terminal/CommandLineInterpreter.m; sourceTree = "<group>"; };
+		7F12CD791BBDB2EA00111A8E /* builtin_commandline.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = builtin_commandline.cpp; path = Fish/builtin_commandline.cpp; sourceTree = "<group>"; };
+		7F12CD7A1BBDB2EA00111A8E /* builtin_complete.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = builtin_complete.cpp; path = Fish/builtin_complete.cpp; sourceTree = "<group>"; };
+		7F12CD7B1BBDB2EA00111A8E /* builtin_jobs.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = builtin_jobs.cpp; path = Fish/builtin_jobs.cpp; sourceTree = "<group>"; };
+		7F12CD7C1BBDB2EA00111A8E /* builtin_printf.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = builtin_printf.cpp; path = Fish/builtin_printf.cpp; sourceTree = "<group>"; };
+		7F12CD7D1BBDB2EA00111A8E /* builtin_set_color.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = builtin_set_color.cpp; path = Fish/builtin_set_color.cpp; sourceTree = "<group>"; };
+		7F12CD7E1BBDB2EA00111A8E /* builtin_set.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = builtin_set.cpp; path = Fish/builtin_set.cpp; sourceTree = "<group>"; };
+		7F12CD7F1BBDB2EA00111A8E /* builtin_string.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = builtin_string.cpp; path = Fish/builtin_string.cpp; sourceTree = "<group>"; };
+		7F12CD801BBDB2EA00111A8E /* builtin_test.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = builtin_test.cpp; path = Fish/builtin_test.cpp; sourceTree = "<group>"; };
+		7F12CD811BBDB2EA00111A8E /* builtin_ulimit.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = builtin_ulimit.cpp; path = Fish/builtin_ulimit.cpp; sourceTree = "<group>"; };
+		7F12CD821BBDB2EA00111A8E /* builtin.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = builtin.cpp; path = Fish/builtin.cpp; sourceTree = "<group>"; };
+		7F12CD831BBDB2EA00111A8E /* builtin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = builtin.h; path = Fish/builtin.h; sourceTree = "<group>"; };
 		7F8084AC1BB59B9A002FEFF2 /* libcoreutils.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcoreutils.a; path = "../../../../busybox-osx/coreutils/libcoreutils/libcoreutils.a"; sourceTree = "<group>"; };
 		7F907F681BA4C81400FF2146 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		7F9406151BBED277005CCF09 /* builtin_commandline.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = builtin_commandline.cpp; sourceTree = "<group>"; };
-		7F9406161BBED277005CCF09 /* builtin_complete.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = builtin_complete.cpp; sourceTree = "<group>"; };
-		7F9406171BBED277005CCF09 /* builtin_jobs.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = builtin_jobs.cpp; sourceTree = "<group>"; };
-		7F9406181BBED277005CCF09 /* builtin_printf.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = builtin_printf.cpp; sourceTree = "<group>"; };
-		7F9406191BBED277005CCF09 /* builtin_set_color.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = builtin_set_color.cpp; sourceTree = "<group>"; };
-		7F94061A1BBED277005CCF09 /* builtin_set.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = builtin_set.cpp; sourceTree = "<group>"; };
-		7F94061B1BBED277005CCF09 /* builtin_string.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = builtin_string.cpp; sourceTree = "<group>"; };
-		7F94061C1BBED277005CCF09 /* builtin_test.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = builtin_test.cpp; sourceTree = "<group>"; };
-		7F94061D1BBED277005CCF09 /* builtin_ulimit.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = builtin_ulimit.cpp; sourceTree = "<group>"; };
-		7F94061E1BBED277005CCF09 /* builtin.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = builtin.cpp; sourceTree = "<group>"; };
-		7F94061F1BBED277005CCF09 /* builtin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = builtin.h; sourceTree = "<group>"; };
-		7F9406201BBED2BE005CCF09 /* config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
-		7F9406211BBED2BE005CCF09 /* fish_term_icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = fish_term_icon.icns; sourceTree = "<group>"; };
-		7F9406221BBED2BE005CCF09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7F9406231BBED2BE005CCF09 /* install.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = install.sh; sourceTree = "<group>"; };
-		7F9406241BBED2BE005CCF09 /* launch_fish.scpt */ = {isa = PBXFileReference; lastKnownFileType = file; path = launch_fish.scpt; sourceTree = "<group>"; };
-		7F9406251BBED2BE005CCF09 /* osx_fish_launcher.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = osx_fish_launcher.m; sourceTree = "<group>"; };
-		7F9406261BBED2BE005CCF09 /* pcre2 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = pcre2; sourceTree = "<group>"; };
-		7F9406271BBED2BE005CCF09 /* shared_headers */ = {isa = PBXFileReference; lastKnownFileType = folder; path = shared_headers; sourceTree = "<group>"; };
-		7F9406281BBED2FE005CCF09 /* common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = common.h; sourceTree = "<group>"; };
-		7F9406291BBED2FE005CCF09 /* fallback.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = fallback.h; sourceTree = "<group>"; };
-		7F94062A1BBED2FE005CCF09 /* io.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = io.h; sourceTree = "<group>"; };
 		7F9FD8C71BB2201400D30A9F /* coreutils.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = coreutils.a; path = "../../../../busybox-osx/coreutils/coreutils.a"; sourceTree = "<group>"; };
 		7FEEF2DF1BBC6234008DAD68 /* built-in.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "built-in.o"; path = "../../../../busybox-osx/coreutils/built-in.o"; sourceTree = "<group>"; };
 		7FEEF2E21BBC6579008DAD68 /* libcoreutils.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcoreutils.a; path = "../../../../busybox-osx/coreutils/libcoreutils.a"; sourceTree = "<group>"; };
@@ -341,7 +331,6 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				7F2C582C1BBDEC8F00F1BFF2 /* Shell */,
 				2C11C54C1013A4B700A2746E /* Tests */,
 				2C11C99B1013FEE800A2746E /* Preferences */,
 				2C11C54A1013A4AB00A2746E /* SubProcess */,
@@ -350,7 +339,7 @@
 				1D3623240D0F684500981E51 /* MobileTerminalAppDelegate.h */,
 				1D3623250D0F684500981E51 /* MobileTerminalAppDelegate.m */,
 				28D7ACF60DDB3853001CB0EB /* MobileTerminalViewController.h */,
-				28D7ACF70DDB3853001CB0EB /* MobileTerminalViewController.mm */,
+				28D7ACF70DDB3853001CB0EB /* MobileTerminalViewController.m */,
 				2C66C082101C47FB00E4189B /* MenuView.h */,
 				2C66C083101C47FB00E4189B /* MenuView.m */,
 				9FF8508C12177F81000CC2A2 /* GestureResponder.h */,
@@ -378,6 +367,7 @@
 			isa = PBXGroup;
 			children = (
 				7F907F681BA4C81400FF2146 /* Default-568h@2x.png */,
+				7F12CD761BBDB2AE00111A8E /* Shell */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
@@ -497,15 +487,15 @@
 				7FF733721BAA3BDD00AE8C91 /* CommandTextView.h */,
 				7FF733731BAA3BDD00AE8C91 /* CommandTextView.m */,
 				7F09F5C31BA90D75003BD92D /* CommandLineInterpreter.h */,
-				7F09F5C41BA90D75003BD92D /* CommandLineInterpreter.mm */,
+				7F09F5C41BA90D75003BD92D /* CommandLineInterpreter.m */,
 				9F86D6CD123DDE0C00FAA3C4 /* UITextInputBase.h */,
 				9F86D6CE123DDE0C00FAA3C4 /* UITextInputBase.m */,
 				2C11C9251013F85A00A2746E /* TerminalGroupView.h */,
-				2C11C9261013F85A00A2746E /* TerminalGroupView.mm */,
+				2C11C9261013F85A00A2746E /* TerminalGroupView.m */,
 				2C11C9271013F85A00A2746E /* TerminalKeyboard.h */,
-				2C11C9281013F85A00A2746E /* TerminalKeyboard.mm */,
+				2C11C9281013F85A00A2746E /* TerminalKeyboard.m */,
 				2C11C9291013F85A00A2746E /* TerminalView.h */,
-				2C11C92A1013F85A00A2746E /* TerminalView.mm */,
+				2C11C92A1013F85A00A2746E /* TerminalView.m */,
 			);
 			name = Terminal;
 			sourceTree = "<group>";
@@ -539,41 +529,22 @@
 			name = Preferences;
 			sourceTree = "<group>";
 		};
-		7F2C582C1BBDEC8F00F1BFF2 /* Shell */ = {
+		7F12CD761BBDB2AE00111A8E /* Shell */ = {
 			isa = PBXGroup;
 			children = (
-				7F9406281BBED2FE005CCF09 /* common.h */,
-				7F9406291BBED2FE005CCF09 /* fallback.h */,
-				7F94062A1BBED2FE005CCF09 /* io.h */,
-				7F9406151BBED277005CCF09 /* builtin_commandline.cpp */,
-				7F9406161BBED277005CCF09 /* builtin_complete.cpp */,
-				7F9406171BBED277005CCF09 /* builtin_jobs.cpp */,
-				7F9406181BBED277005CCF09 /* builtin_printf.cpp */,
-				7F9406191BBED277005CCF09 /* builtin_set_color.cpp */,
-				7F94061A1BBED277005CCF09 /* builtin_set.cpp */,
-				7F94061B1BBED277005CCF09 /* builtin_string.cpp */,
-				7F94061C1BBED277005CCF09 /* builtin_test.cpp */,
-				7F94061D1BBED277005CCF09 /* builtin_ulimit.cpp */,
-				7F94061E1BBED277005CCF09 /* builtin.cpp */,
-				7F94061F1BBED277005CCF09 /* builtin.h */,
-				7F2C584F1BBDF28B00F1BFF2 /* osx */,
+				7F12CD791BBDB2EA00111A8E /* builtin_commandline.cpp */,
+				7F12CD7A1BBDB2EA00111A8E /* builtin_complete.cpp */,
+				7F12CD7B1BBDB2EA00111A8E /* builtin_jobs.cpp */,
+				7F12CD7C1BBDB2EA00111A8E /* builtin_printf.cpp */,
+				7F12CD7D1BBDB2EA00111A8E /* builtin_set_color.cpp */,
+				7F12CD7E1BBDB2EA00111A8E /* builtin_set.cpp */,
+				7F12CD7F1BBDB2EA00111A8E /* builtin_string.cpp */,
+				7F12CD801BBDB2EA00111A8E /* builtin_test.cpp */,
+				7F12CD811BBDB2EA00111A8E /* builtin_ulimit.cpp */,
+				7F12CD821BBDB2EA00111A8E /* builtin.cpp */,
+				7F12CD831BBDB2EA00111A8E /* builtin.h */,
 			);
 			name = Shell;
-			sourceTree = "<group>";
-		};
-		7F2C584F1BBDF28B00F1BFF2 /* osx */ = {
-			isa = PBXGroup;
-			children = (
-				7F9406201BBED2BE005CCF09 /* config.h */,
-				7F9406211BBED2BE005CCF09 /* fish_term_icon.icns */,
-				7F9406221BBED2BE005CCF09 /* Info.plist */,
-				7F9406231BBED2BE005CCF09 /* install.sh */,
-				7F9406241BBED2BE005CCF09 /* launch_fish.scpt */,
-				7F9406251BBED2BE005CCF09 /* osx_fish_launcher.m */,
-				7F9406261BBED2BE005CCF09 /* pcre2 */,
-				7F9406271BBED2BE005CCF09 /* shared_headers */,
-			);
-			name = osx;
 			sourceTree = "<group>";
 		};
 		9FB73ED711C476B9005E3764 /* Resources-iPad */ = {
@@ -614,6 +585,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F2C582B1BBDE97100F1BFF2 /* Settings.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -854,14 +826,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F12CE7F1BBDB9C800111A8E /* GestureActionRegistry.m in Sources */,
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* MobileTerminalAppDelegate.m in Sources */,
-				28D7ACF80DDB3853001CB0EB /* MobileTerminalViewController.mm in Sources */,
+				28D7ACF80DDB3853001CB0EB /* MobileTerminalViewController.m in Sources */,
 				7FF733741BAA3BDD00AE8C91 /* CommandTextView.m in Sources */,
-				7F09F5C51BA90D75003BD92D /* CommandLineInterpreter.mm in Sources */,
+				7F09F5C51BA90D75003BD92D /* CommandLineInterpreter.m in Sources */,
 				2C66C084101C47FB00E4189B /* MenuView.m in Sources */,
 				9FF8508E12177F81000CC2A2 /* GestureResponder.m in Sources */,
-				9F6B6D9912297822007BAD59 /* GestureActionRegistry.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -894,10 +866,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C11C9391013F89B00A2746E /* TerminalGroupView.mm in Sources */,
-				2C11C93A1013F89B00A2746E /* TerminalKeyboard.mm in Sources */,
-				2C11C93B1013F89B00A2746E /* TerminalView.mm in Sources */,
-				9F86D6D0123DDE0C00FAA3C4 /* UITextInputBase.m in Sources */,
+				7F12CE7E1BBDB95000111A8E /* UITextInputBase.m in Sources */,
+				2C11C9391013F89B00A2746E /* TerminalGroupView.m in Sources */,
+				2C11C93A1013F89B00A2746E /* TerminalKeyboard.m in Sources */,
+				2C11C93B1013F89B00A2746E /* TerminalView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1105,10 +1077,9 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_THUMB_SUPPORT = NO;
-				HEADER_SEARCH_PATHS = "$(SRCROOT)/Classes";
+				HEADER_SEARCH_PATHS = "";
 				INSTALL_PATH = /Users/user1/Downloads;
-				LIBRARY_SEARCH_PATHS = "/Users/user1/Documents/DEV/busybox-osx/coreutils";
-				"LIBRARY_SEARCH_PATHS[arch=*]" = "/Users/user1/Documents/DEV/busybox-osx/coreutils";
+				LIBRARY_SEARCH_PATHS = "";
 				PREBINDING = NO;
 				PRODUCT_NAME = Terminal;
 			};
@@ -1123,10 +1094,9 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_THUMB_SUPPORT = NO;
-				HEADER_SEARCH_PATHS = "$(SRCROOT)/Classes";
+				HEADER_SEARCH_PATHS = "";
 				INSTALL_PATH = /Users/user1/Downloads;
-				LIBRARY_SEARCH_PATHS = "/Users/user1/Documents/DEV/busybox-osx/coreutils";
-				"LIBRARY_SEARCH_PATHS[arch=*]" = "/Users/user1/Documents/DEV/busybox-osx/coreutils";
+				LIBRARY_SEARCH_PATHS = "";
 				PREBINDING = NO;
 				PRODUCT_NAME = Terminal;
 				ZERO_LINK = NO;
@@ -1220,17 +1190,20 @@
 				ARCHS = armv6;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Don't Code Sign";
 				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_INPUT_FILETYPE = automatic;
 				GCC_THUMB_SUPPORT = NO;
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = NO;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = "$(SRCROOT)";
-				"HEADER_SEARCH_PATHS[arch=*]" = (
-					"$(SRCROOT)/../../../../busybox-osx/BusyBox-Coreutils",
-					"$(SRCROOT)/../../../../busybox-osx/include",
+				HEADER_SEARCH_PATHS = (
+					/Library/Frameworks,
+					/System/Library/Frameworks,
+					/usr/include,
+					"/usr/local/lib/gcc/x86_64-apple-darwin14.0.0/4.9.2/include-fixed",
+					/usr/local/include,
+					"/usr/local/lib/gcc/x86_64-apple-darwin14.0.0/4.9.2/include",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1254,17 +1227,20 @@
 				ARCHS = armv6;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Don't Code Sign";
 				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_INPUT_FILETYPE = automatic;
 				GCC_THUMB_SUPPORT = NO;
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = NO;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = "$(SRCROOT)/**";
-				"HEADER_SEARCH_PATHS[arch=*]" = (
-					"$(SRCROOT)/../../../../busybox-osx/include/**",
-					"$(SRCROOT)/../../../../busybox-osx/BusyBox-Coreutils/**",
+				HEADER_SEARCH_PATHS = (
+					/Library/Frameworks,
+					/System/Library/Frameworks,
+					/usr/include,
+					"/usr/local/lib/gcc/x86_64-apple-darwin14.0.0/4.9.2/include-fixed",
+					/usr/local/include,
+					"/usr/local/lib/gcc/x86_64-apple-darwin14.0.0/4.9.2/include",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
 				ONLY_ACTIVE_ARCH = YES;

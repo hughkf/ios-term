@@ -1,1 +1,1 @@
-#define SVN_VERSION ((int)strtol("530M", NULL, 10))
+#define SVN_VERSION ((int)strtol("Unversioned directory", NULL, 10))
