@@ -44,6 +44,9 @@
 		2C66C084101C47FB00E4189B /* MenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C66C083101C47FB00E4189B /* MenuView.m */; };
 		2C66C156101C54C800E4189B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C66C155101C54C800E4189B /* QuartzCore.framework */; };
 		7F09F5C51BA90D75003BD92D /* CommandLineInterpreter.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7F09F5C41BA90D75003BD92D /* CommandLineInterpreter.mm */; settings = {COMPILER_FLAGS = "-Wno-write-strings"; }; };
+		7F1D096C1BBF11AD008CECD4 /* fish.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7F1D096B1BBF118B008CECD4 /* fish.cpp */; };
+		7F4FE6BD1BBF2AB100C9B0B3 /* event.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7F4FE6BC1BBF2A3300C9B0B3 /* event.cpp */; };
+		7F4FE6BF1BBF2B9A00C9B0B3 /* common.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7F4FE6BE1BBF2B4900C9B0B3 /* common.cpp */; };
 		7F907F691BA4C81400FF2146 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F907F681BA4C81400FF2146 /* Default-568h@2x.png */; };
 		7FF733741BAA3BDD00AE8C91 /* CommandTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FF733731BAA3BDD00AE8C91 /* CommandTextView.m */; };
 		9F24A70111D7C6EF00E6EFC0 /* MenuSettingsViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F24A6FF11D7C6EF00E6EFC0 /* MenuSettingsViewController.h */; };
@@ -213,6 +216,10 @@
 		7F0624891BB1BAD60069B7B7 /* lib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = lib.a; path = "../../../../busybox-osx/coreutils/libcoreutils/lib.a"; sourceTree = "<group>"; };
 		7F09F5C31BA90D75003BD92D /* CommandLineInterpreter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CommandLineInterpreter.h; path = Terminal/CommandLineInterpreter.h; sourceTree = "<group>"; };
 		7F09F5C41BA90D75003BD92D /* CommandLineInterpreter.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = CommandLineInterpreter.mm; path = Terminal/CommandLineInterpreter.mm; sourceTree = "<group>"; };
+		7F1D096B1BBF118B008CECD4 /* fish.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = fish.cpp; sourceTree = "<group>"; };
+		7F4FE6BB1BBF29EB00C9B0B3 /* event.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = event.h; path = "../../fish-shell/src/event.h"; sourceTree = "<group>"; };
+		7F4FE6BC1BBF2A3300C9B0B3 /* event.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = event.cpp; path = "../../fish-shell/src/event.cpp"; sourceTree = "<group>"; };
+		7F4FE6BE1BBF2B4900C9B0B3 /* common.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = common.cpp; sourceTree = "<group>"; };
 		7F8084AC1BB59B9A002FEFF2 /* libcoreutils.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcoreutils.a; path = "../../../../busybox-osx/coreutils/libcoreutils/libcoreutils.a"; sourceTree = "<group>"; };
 		7F907F681BA4C81400FF2146 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		7F9406151BBED277005CCF09 /* builtin_commandline.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = builtin_commandline.cpp; sourceTree = "<group>"; };
@@ -494,6 +501,7 @@
 		2C11C9111013F84000A2746E /* Terminal */ = {
 			isa = PBXGroup;
 			children = (
+				7F1D096B1BBF118B008CECD4 /* fish.cpp */,
 				7FF733721BAA3BDD00AE8C91 /* CommandTextView.h */,
 				7FF733731BAA3BDD00AE8C91 /* CommandTextView.m */,
 				7F09F5C31BA90D75003BD92D /* CommandLineInterpreter.h */,
@@ -542,6 +550,9 @@
 		7F2C582C1BBDEC8F00F1BFF2 /* Shell */ = {
 			isa = PBXGroup;
 			children = (
+				7F4FE6BE1BBF2B4900C9B0B3 /* common.cpp */,
+				7F4FE6BC1BBF2A3300C9B0B3 /* event.cpp */,
+				7F4FE6BB1BBF29EB00C9B0B3 /* event.h */,
 				7F9406281BBED2FE005CCF09 /* common.h */,
 				7F9406291BBED2FE005CCF09 /* fallback.h */,
 				7F94062A1BBED2FE005CCF09 /* io.h */,
@@ -894,6 +905,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F4FE6BF1BBF2B9A00C9B0B3 /* common.cpp in Sources */,
+				7F4FE6BD1BBF2AB100C9B0B3 /* event.cpp in Sources */,
+				7F1D096C1BBF11AD008CECD4 /* fish.cpp in Sources */,
 				2C11C9391013F89B00A2746E /* TerminalGroupView.mm in Sources */,
 				2C11C93A1013F89B00A2746E /* TerminalKeyboard.mm in Sources */,
 				2C11C93B1013F89B00A2746E /* TerminalView.mm in Sources */,

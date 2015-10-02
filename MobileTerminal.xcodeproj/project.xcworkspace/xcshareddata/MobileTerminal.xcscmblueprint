@@ -1,24 +1,25 @@
 {
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "5C3D9E0D4704E5EEBECBD9A198DF1D2EAEEDB345",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
 
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
-    "8B90F0D044B734A4992C70E599286DB8C18168C0" : 0,
-    "D89A46EA63E17C3388B239E1F8EFC7F3852E6BAF" : 0
+    "D89A46EA63E17C3388B239E1F8EFC7F3852E6BAF" : 0,
+    "5C3D9E0D4704E5EEBECBD9A198DF1D2EAEEDB345" : 0
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "0DC316DE-B73D-43E5-AB79-EE00C1E7467D",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
-    "8B90F0D044B734A4992C70E599286DB8C18168C0" : "DEV\/busybox-osx\/",
-    "D89A46EA63E17C3388B239E1F8EFC7F3852E6BAF" : "DEV\/fish-shell\/"
+    "D89A46EA63E17C3388B239E1F8EFC7F3852E6BAF" : "fish-shell\/",
+    "5C3D9E0D4704E5EEBECBD9A198DF1D2EAEEDB345" : "ios-term\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "MobileTerminal",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
-  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "mobileterminal-read-only_v3\/branches\/applesdk\/MobileTerminal\/MobileTerminal.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "MobileTerminal.xcodeproj",
   "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
     {
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/daliworks\/busybox-osx.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/hughkf\/ios-term.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "8B90F0D044B734A4992C70E599286DB8C18168C0"
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "5C3D9E0D4704E5EEBECBD9A198DF1D2EAEEDB345"
     },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/fish-shell\/fish-shell",
