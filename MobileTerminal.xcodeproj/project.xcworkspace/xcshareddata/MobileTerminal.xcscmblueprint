@@ -1,0 +1,32 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "58fa8ae0-6a36-0410-a7a1-b30e0234c60e",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+    "58fa8ae0-6a36-0410-a7a1-b30e0234c60e" : {
+
+    }
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "8B90F0D044B734A4992C70E599286DB8C18168C0" : 0,
+    "58fa8ae0-6a36-0410-a7a1-b30e0234c60e" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "0DC316DE-B73D-43E5-AB79-EE00C1E7467D",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "8B90F0D044B734A4992C70E599286DB8C18168C0" : "busybox-osx\/",
+    "58fa8ae0-6a36-0410-a7a1-b30e0234c60e" : "mobileterminal-read-only\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "MobileTerminal",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "branches\/applesdk\/MobileTerminal\/MobileTerminal.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "http:\/\/mobileterminal.googlecode.com\/svn",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "58fa8ae0-6a36-0410-a7a1-b30e0234c60e"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/daliworks\/busybox-osx.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "8B90F0D044B734A4992C70E599286DB8C18168C0"
+    }
+  ]
+}

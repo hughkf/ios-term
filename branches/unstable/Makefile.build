@@ -1,0 +1,37 @@
+CC=/usr/local/bin/arm-apple-darwin-gcc
+
+CFLAGS=-Wall -O7
+
+LDFLAGS=-lobjc -framework CoreFoundation -framework Foundation \
+        -framework UIKit -framework LayerKit -framework CoreGraphics \
+        -framework GraphicsServices -lcurses  -lobjc
+
+all:	Terminal
+
+Terminal: main.o \
+					MobileTerminal.o \
+					VT100Screen.o VT100Terminal.o \
+					PTYTextView.o PTYTile.o \
+					Color.o \
+					ColorMap.o \
+					Settings.o \
+					ShellKeyboard.o \
+					SubProcess.o \
+					GestureView.o \
+					Menu.o \
+          PieView.o \
+					Preferences.o \
+					Constants.o \
+          Tools.o \
+					Log.o
+	$(CC) $(LDFLAGS) -o $@ $^
+
+%.o:	%.m
+	$(CC) -c $(CFLAGS) $(CPPFLAGS) $< -o $@
+
+depend:
+	@makedepend *.m &> /dev/null
+
+clean: 
+	@rm -f *.o Terminal
+
