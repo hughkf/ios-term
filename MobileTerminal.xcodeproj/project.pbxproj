@@ -50,6 +50,7 @@
 		7F907F691BA4C81400FF2146 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F907F681BA4C81400FF2146 /* Default-568h@2x.png */; };
 		7F9406501BBEDBA9005CCF09 /* CommandLineInterpreter.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7F09F5C41BA90D75003BD92D /* CommandLineInterpreter.mm */; };
 		7F9406521BBEE1A7005CCF09 /* fish.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7F94062C1BBED840005CCF09 /* fish.cpp */; };
+		7FDA00331BBF00C50057CA57 /* common.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7FDA00321BBF00640057CA57 /* common.cpp */; };
 		7FF733741BAA3BDD00AE8C91 /* CommandTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FF733731BAA3BDD00AE8C91 /* CommandTextView.m */; };
 		9F24A70111D7C6EF00E6EFC0 /* MenuSettingsViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F24A6FF11D7C6EF00E6EFC0 /* MenuSettingsViewController.h */; };
 		9F24A70211D7C6EF00E6EFC0 /* MenuSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F24A70011D7C6EF00E6EFC0 /* MenuSettingsViewController.m */; };
@@ -265,6 +266,10 @@
 		7F94064D1BBEDADC005CCF09 /* input_common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = input_common.h; sourceTree = "<group>"; };
 		7F9406511BBEDF11005CCF09 /* fish_directories.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = fish_directories.h; sourceTree = "<group>"; };
 		7F9FD8C71BB2201400D30A9F /* coreutils.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = coreutils.a; path = "../../../../busybox-osx/coreutils/coreutils.a"; sourceTree = "<group>"; };
+		7FDA00321BBF00640057CA57 /* common.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = common.cpp; sourceTree = "<group>"; };
+		7FDA00341BBF00F60057CA57 /* wildcard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = wildcard.h; sourceTree = "<group>"; };
+		7FDA00351BBF01200057CA57 /* fallback.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = fallback.cpp; sourceTree = "<group>"; };
+		7FDA00361BBF01200057CA57 /* util.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = util.cpp; sourceTree = "<group>"; };
 		7FEEF2DF1BBC6234008DAD68 /* built-in.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "built-in.o"; path = "../../../../busybox-osx/coreutils/built-in.o"; sourceTree = "<group>"; };
 		7FEEF2E21BBC6579008DAD68 /* libcoreutils.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcoreutils.a; path = "../../../../busybox-osx/coreutils/libcoreutils.a"; sourceTree = "<group>"; };
 		7FF6BB771BBDAF3C00C7E1E4 /* libpcre2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libpcre2.a; path = ../../../../DerivedData/MobileConsole/Build/Products/Debug/libpcre2.a; sourceTree = "<group>"; };
@@ -572,6 +577,10 @@
 		7F2C582C1BBDEC8F00F1BFF2 /* Shell */ = {
 			isa = PBXGroup;
 			children = (
+				7FDA00351BBF01200057CA57 /* fallback.cpp */,
+				7FDA00361BBF01200057CA57 /* util.cpp */,
+				7FDA00341BBF00F60057CA57 /* wildcard.h */,
+				7FDA00321BBF00640057CA57 /* common.cpp */,
 				7F04AFD41BBEF6B90079B07C /* signal.cpp */,
 				7F04AFD51BBEF6B90079B07C /* signal.h */,
 				7F04AFD21BBEF5E50079B07C /* event.cpp */,
@@ -945,6 +954,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FDA00331BBF00C50057CA57 /* common.cpp in Sources */,
 				7F04AFD31BBEF6510079B07C /* event.cpp in Sources */,
 				7F9406521BBEE1A7005CCF09 /* fish.cpp in Sources */,
 				2C11C9391013F89B00A2746E /* TerminalGroupView.mm in Sources */,
@@ -1036,14 +1046,7 @@
 				GCC_PREFIX_HEADER = MobileTerminal_Prefix.pch;
 				GCC_THUMB_SUPPORT = NO;
 				GCC_VERSION = "";
-				HEADER_SEARCH_PATHS = (
-					"<Multiple",
-					"values>",
-					/Library/Frameworks,
-					/System/Library/Frameworks,
-					/usr/include,
-					"/usr/local/lib/gcc/x86_64-apple-darwin14.0.0/4.9.2/include-fixed",
-				);
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "MobileTerminal-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
 				LIBRARY_SEARCH_PATHS = "/Users/user1/Documents/DEV/busybox-osx/coreutils/libcoreutils";
@@ -1052,6 +1055,7 @@
 				PRODUCT_NAME = Terminal;
 				SDKROOT = iphoneos9.0;
 				TARGETED_DEVICE_FAMILY = 1;
+				USER_HEADER_SEARCH_PATHS = /usr/include;
 			};
 			name = Debug;
 		};
@@ -1065,14 +1069,7 @@
 				GCC_PREFIX_HEADER = MobileTerminal_Prefix.pch;
 				GCC_THUMB_SUPPORT = NO;
 				GCC_VERSION = "";
-				HEADER_SEARCH_PATHS = (
-					"<Multiple",
-					"values>",
-					/Library/Frameworks,
-					/System/Library/Frameworks,
-					/usr/include,
-					"/usr/local/lib/gcc/x86_64-apple-darwin14.0.0/4.9.2/include-fixed",
-				);
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "MobileTerminal-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
 				LIBRARY_SEARCH_PATHS = "/Users/user1/Documents/DEV/busybox-osx/coreutils/libcoreutils";
@@ -1081,6 +1078,7 @@
 				PRODUCT_NAME = Terminal;
 				SDKROOT = iphoneos9.0;
 				TARGETED_DEVICE_FAMILY = 1;
+				USER_HEADER_SEARCH_PATHS = /usr/include;
 			};
 			name = Release;
 		};
@@ -1156,15 +1154,17 @@
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ARCHS = armv6;
 				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = /System/Library/Frameworks;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_THUMB_SUPPORT = NO;
-				HEADER_SEARCH_PATHS = "$(SRCROOT)/Classes";
+				HEADER_SEARCH_PATHS = "";
 				INSTALL_PATH = /Users/user1/Downloads;
 				LIBRARY_SEARCH_PATHS = "";
-				"LIBRARY_SEARCH_PATHS[arch=*]" = "/Users/user1/Documents/DEV/busybox-osx/coreutils";
+				"LIBRARY_SEARCH_PATHS[arch=*]" = "";
 				PREBINDING = NO;
 				PRODUCT_NAME = Terminal;
+				USER_HEADER_SEARCH_PATHS = /usr/include;
 			};
 			name = Debug;
 		};
@@ -1175,14 +1175,16 @@
 				ARCHS = armv6;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = /System/Library/Frameworks;
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_THUMB_SUPPORT = NO;
-				HEADER_SEARCH_PATHS = "$(SRCROOT)/Classes";
+				HEADER_SEARCH_PATHS = "";
 				INSTALL_PATH = /Users/user1/Downloads;
 				LIBRARY_SEARCH_PATHS = "";
-				"LIBRARY_SEARCH_PATHS[arch=*]" = "/Users/user1/Documents/DEV/busybox-osx/coreutils";
+				"LIBRARY_SEARCH_PATHS[arch=*]" = "";
 				PREBINDING = NO;
 				PRODUCT_NAME = Terminal;
+				USER_HEADER_SEARCH_PATHS = /usr/include;
 				ZERO_LINK = NO;
 			};
 			name = Release;
@@ -1281,11 +1283,7 @@
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = NO;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = "$(SRCROOT)";
-				"HEADER_SEARCH_PATHS[arch=*]" = (
-					"$(SRCROOT)/../../../../busybox-osx/BusyBox-Coreutils",
-					"$(SRCROOT)/../../../../busybox-osx/include",
-				);
+				HEADER_SEARCH_PATHS = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-all_load";
@@ -1296,7 +1294,7 @@
 				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = YES;
 				SDKROOT = iphoneos9.0;
 				TARGETED_DEVICE_FAMILY = 1;
-				USER_HEADER_SEARCH_PATHS = "/Users/user1/Documents/DEV/mobileterminal-read-only/branches/applesdk/mini-shell/source";
+				USER_HEADER_SEARCH_PATHS = /usr/include;
 				VALID_ARCHS = armv6;
 				WARNING_CFLAGS = "-Wall";
 			};
@@ -1315,11 +1313,7 @@
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = NO;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = "$(SRCROOT)/**";
-				"HEADER_SEARCH_PATHS[arch=*]" = (
-					"$(SRCROOT)/../../../../busybox-osx/include/**",
-					"$(SRCROOT)/../../../../busybox-osx/BusyBox-Coreutils/**",
-				);
+				HEADER_SEARCH_PATHS = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-all_load";
@@ -1328,7 +1322,7 @@
 				PRODUCT_NAME = Terminal;
 				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = YES;
 				SDKROOT = iphoneos9.0;
-				USER_HEADER_SEARCH_PATHS = "/Users/user1/Documents/DEV/mobileterminal-read-only/branches/applesdk/mini-shell/source";
+				USER_HEADER_SEARCH_PATHS = /usr/include;
 				VALID_ARCHS = armv6;
 				WARNING_CFLAGS = "-Wall";
 			};
