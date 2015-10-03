@@ -15,5 +15,6 @@
 
 // Adjust the height and width of the subprocess terminal.
 - (void)setWidth:(int)terminalWidth withHeight:(int)terminalHeight;
+- (int) getWidth;
 
 @end

@@ -99,29 +99,38 @@ char* join_strings(char* strings[], char* separator, int count) {
     return str;
 }
 
+char buffer[1024];
+
 - (const char*)interpretCommand:(char**)cmd_args : (const char*)cmd : (int) length {
 
-    if (strcmp("ls", cmd_args[0]) == 0) {
+    if (strcmp("pwd", cmd_args[0]) == 0) {
+        buff = (char*) malloc(1024 * sizeof(char) );
+        getcwd(buff, strlen(buff));
+        sprintf(buffer, "\r\n%s", buff);
+        return buffer;
+    }
+
+    else if (strcmp("ls", cmd_args[0]) == 0) {
         return [self ls : cmd_args[1] ];
     }
 
-    if (strcmp("exit", cmd_args[0]) == 0) {
+    else if (strcmp("exit", cmd_args[0]) == 0) {
         exit(EXIT_SUCCESS);
     }
 
-    if (strcmp("clear", cmd_args[0]) == 0) {
+    else if (strcmp("clear", cmd_args[0]) == 0) {
         [[view textView] clearScreen];
         return NULL;
     }
     
-    if (strcmp("echo", cmd_args[0]) == 0) {
+    else if (strcmp("echo", cmd_args[0]) == 0) {
         buff = (char*) malloc(strlen(cmd));
         cmd += strlen(cmd_args[0]);
         sprintf(buff, "\r\n %s", cmd);
         return buff;
     }
 
-    if (strcmp("cd", cmd_args[0]) == 0) {
+    else if (strcmp("cd", cmd_args[0]) == 0) {
 
         if (cmd_args[1] == NULL) {
             chdir(getenv("HOME"));
@@ -133,6 +142,8 @@ char* join_strings(char* strings[], char* separator, int count) {
                 buff = (char*) malloc(strlen(cmd_args[1]) + strlen(format_str));
                 sprintf(buff, format_str, cmd_args[1]);
                 return buff;
+            } else {
+                return NULL;
             }
         }
     }

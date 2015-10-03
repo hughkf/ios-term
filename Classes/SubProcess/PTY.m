@@ -31,6 +31,10 @@
   return self;
 }
 
+- (int) getWidth {
+    return width;
+}
+
 - (void)setWidth:(int)terminalWidth withHeight:(int)terminalHeight;
 {
   if (width == terminalWidth && height == terminalHeight) {

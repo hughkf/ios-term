@@ -129,6 +129,12 @@ static int currentCommandLength;
   [super dealloc];
 }
 
+/* TODO: fix this */
+- (int) getWidth {
+//    return [pty getWidth];
+    return 1024;
+}
+
 - (void)layoutSubviews
 {
   [super layoutSubviews];
@@ -145,7 +151,6 @@ static int currentCommandLength;
 
 - (void)receiveKeyboardInput:(NSData*)data
 {
-    //fprintf(stderr, "cursorPosition: %d", [textView cursorX]);
     if (0 < [TerminalKeyboard backspaceCount]){
         currentCommandLength -= [TerminalKeyboard backspaceCount];
         [TerminalKeyboard setBackspaceCount: 0];

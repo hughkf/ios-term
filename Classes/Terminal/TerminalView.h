@@ -49,6 +49,7 @@
 - (id)initWithCoder:(NSCoder *)decoder;
 - (void)setFont:(UIFont*)font;
 - (ColorMap*)colorMap;
+- (int) getWidth;
 
 // Must be invoked to start the sub processes
 - (void)startSubProcess;
