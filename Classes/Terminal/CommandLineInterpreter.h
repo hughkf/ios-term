@@ -4,7 +4,7 @@
 //  Created by Hugh Krogh-Freeman on 9/15/15.
 
 #import <Foundation/Foundation.h>
-#include "common.h"
+//#import "ls.h"
 #import "TerminalView.h"
 
 @class TerminalView;
@@ -19,5 +19,6 @@
 - (void)dealloc;
 - (const char*)interpretCommand:(char**)cmd_args : (const char*)cmd : (int) length;
 - (char*) string_literal: (const char*) str;
+- (char *) ls: (char*) pathname;
 
 @end

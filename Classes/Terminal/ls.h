@@ -2,7 +2,7 @@
 //  ls.h
 //  MobileTerminal
 //
-//  Created by Hugh Krogh-Freeman on 9/30/15.
+//  Created by Hugh Krogh-Freeman on 10/2/15.
 //
 //
 
@@ -11,6 +11,6 @@
 
 #include <stdio.h>
 
-int ls_main(int argc, char **argv);
+int ls();
 
 #endif /* ls_h */
