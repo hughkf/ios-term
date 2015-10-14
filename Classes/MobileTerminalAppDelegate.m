@@ -33,7 +33,7 @@
   [window addSubview:navigationController.view];
   [window makeKeyAndVisible];
   inPreferences = FALSE;
-  [window setRootViewController:navigationController]; //new
+  [window setRootViewController:navigationController]; 
 }
 
 //static const NSTimeInterval kAnimationDuration = 1.00f;

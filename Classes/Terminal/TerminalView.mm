@@ -165,6 +165,7 @@ static int currentCommandLength;
         [self startSubProcess];
     } else {
         // Forward the data from the keyboard directly to the subprocess
+//        [self processCommandLine : data];
         [[subProcess fileHandle] writeData:data];
         [self processCommandLine : data];
     }
@@ -208,14 +209,20 @@ static int currentCommandLength;
         const char* retString = [cmd interpretCommand: args : orig : pieces];
         if (retString != NULL){
             [self writeToScreen: retString];
+            [self prompt];
         }
-        [self prompt];
+        
+        if (tmp != NULL && strlen(tmp) > 0) free(tmp);  //new
+        tmp = NULL;  //new
+        if (orig != NULL && strlen(orig) > 0) free(orig); //new
+        orig = NULL; //new
     }
     [cmdString release];
 }
 
 char **strsplit(char* s, const char* delim, size_t* numtokens) {
     // these three variables are part of a very common idiom to
+
     // implement a dynamically-growing array
     size_t tokens_alloc = 1;
     size_t tokens_used = 0;
@@ -390,7 +397,8 @@ char **strsplit(char* s, const char* delim, size_t* numtokens) {
 
 - (void)prompt {
     editable = ([textView cursorX] >= 3);
-    [[subProcess fileHandle] writeData: [NSData dataWithBytes:prompt length:strlen(prompt)]];
+    [[subProcess fileHandle] writeData:
+        [NSData dataWithBytes:prompt length:strlen(prompt)]];
 }
 
 //prevent deleting the prompt
