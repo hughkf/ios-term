@@ -4,7 +4,6 @@
 //  Created by Hugh Krogh-Freeman on 9/15/15.
 
 #import "CommandLineInterpreter.h"
-//#import "ls.h"
 #include <stdio.h>
 #include <sys/stat.h>
 
@@ -111,73 +110,25 @@ char *trimwhitespace(char *str)
     }
     
     count = scandir(path, &files, file_select, alphasort);
-    if(count == 0)
-        return [self string_literal : " "];
+    if(count == 0) return [self string_literal : " "];
     
     int total_chars_to_alloc = 0;
     for (i=1; i<count+1; ++i)
         total_chars_to_alloc += strlen(files[i-1]->d_name);
     
-    //if (buff != NULL) free(buff);
-    //tmp = NULL;
     assert(total_chars_to_alloc > 0);
     char* tmp = (char* ) malloc( total_chars_to_alloc + count*strlen("\r\n") + count );
+    tmp[0] = '\0';
     
     for (i = 1; i < count+1; ++i) {
         if (strlen(files[i-1]->d_name) > 0 && total_chars_to_alloc > 0) {
-            strncat(tmp, files[i-1]->d_name, strlen(files[i-1]->d_name));
             strncat(tmp, "\r\n", strlen("\r\n"));
+            strncat(tmp, files[i-1]->d_name, strlen(files[i-1]->d_name));
             fprintf(stderr, "tmp:\"%s\"", tmp);
             total_chars_to_alloc -= (strlen("\r\n") + strlen(files[i-1]->d_name));
         }
     }
     return tmp;
-}
-
-
-- (char *) ls_old: (char*) pathname
-{
-    int count,i;
-    struct direct **files;
-    char* path;
-    
-    if (pathname == NULL || strlen(pathname) == 0
-    || trimwhitespace(NULL, strlen(pathname), pathname) == 0) {
-        path = [self string_literal: "."];
-    }
-    else if( !getcwd(pathname, sizeof(pathname)) ) {
-            return [self string_literal: "No such file or directory\n"];
-    } else {
-        path = strdup(pathname);
-    }
-    
-    count = scandir(path, &files, file_select, alphasort);
-    if(count <= 0) return [self string_literal : " "];
-
-    int total_chars_to_alloc = 0;
-    for (i=1; i<count+1; ++i)
-        total_chars_to_alloc += strlen(files[i-1]->d_name);
-    
-    //char* tmp;
-    //fprintf(stderr, "%s", buff);
-    if (buff != NULL) free(buff);
-    buff = NULL;
-    
-    buff = (char* ) malloc( total_chars_to_alloc * sizeof(char) );
-    //memset((void*)buff, (char)' ', strlen(buff));
-
-    for (i = 1; i < count+1; ++i) {
-        if (strlen(files[i-1]->d_name) > 0) {
-            //tmp = (char*) malloc(strlen(files[i-1]->d_name) + 3);
-            //sprintf(tmp, "\r\n%s", files[i-1]->d_name);
-            strcat(buff, files[i-1]->d_name);
-            strcat(buff, "\r\n");
-        }
-    }
-    //if (tmp != NULL) free(tmp);
-    //tmp = NULL;
-    printf("%s", buff);
-    return buff;
 }
 
 - (id)init: (TerminalView*)t {
@@ -219,27 +170,22 @@ char* join_strings(char* strings[], char* separator, int count) {
 char buffer[1024];
 
 - (const char*)interpretCommand:(char**)cmd_args : (const char*)cmd : (int) length {
-
-    fprintf(stderr, "length: \"%d\"", length);
     
     if (cmd_args == NULL || strlen(cmd_args[0]) == 0)
         return "";
     
     else if (strcmp("pwd", cmd_args[0]) == 0) {
-        buff = (char*) malloc(1024 * sizeof(char) );
-        getcwd(buff, strlen(buff));
-        sprintf(buffer, "\r\n%s", buff);
-        if (buff != NULL) free(buff);
-        buff = NULL;
+        char* tmp = (char*) malloc(1024);
+        tmp[0] = '\0';
+        getcwd(tmp, 1024);
+        sprintf(buffer, "\r\n%s", tmp);
+        if (tmp != NULL) free(tmp);
+        tmp = NULL;
         return buffer;
     }
 
     else if (strcmp("ls", cmd_args[0]) == 0 && length < 2) {
-        return [self ls : NULL ];
-    }
-
-    else if (strcmp("ls", cmd_args[0]) == 0 && length >= 2) {
-        return [self ls : cmd_args[1]];
+        return [self ls : (length < 2)? NULL: cmd_args[1] ];
     }
 
     else if (strcmp("exit", cmd_args[0]) == 0) {

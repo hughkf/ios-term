@@ -165,7 +165,6 @@ static int currentCommandLength;
         [self startSubProcess];
     } else {
         // Forward the data from the keyboard directly to the subprocess
-//        [self processCommandLine : data];
         [[subProcess fileHandle] writeData:data];
         [self processCommandLine : data];
     }
@@ -209,13 +208,13 @@ static int currentCommandLength;
         const char* retString = [cmd interpretCommand: args : orig : pieces];
         if (retString != NULL){
             [self writeToScreen: retString];
-            [self prompt];
         }
+        [self prompt]; 
         
-        if (tmp != NULL && strlen(tmp) > 0) free(tmp);  //new
-        tmp = NULL;  //new
-        if (orig != NULL && strlen(orig) > 0) free(orig); //new
-        orig = NULL; //new
+        if (tmp != NULL && strlen(tmp) > 0) free(tmp);  
+        tmp = NULL;  
+        if (orig != NULL && strlen(orig) > 0) free(orig); 
+        orig = NULL; 
     }
     [cmdString release];
 }
@@ -253,73 +252,6 @@ char **strsplit(char* s, const char* delim, size_t* numtokens) {
     return tokens;
 }
 
-//char *trim_leading_whitespace(char *str)
-//{
-//    char *end;
-//    
-//    // Trim leading space
-//    while(isspace(*str)) str++;
-//    
-//    if(*str == 0)  // All spaces?
-//        return str;
-//    
-//    // Trim trailing space
-//    end = str + strlen(str) - 1;
-//    while(end > str && isspace(*end)) end--;
-//    
-//    // Write new null terminator
-//    *(end+1) = 0;
-//    
-//    return str;
-//}
-
-//char** str_split(char* a_str, const char a_delim)
-//{
-//        char** result    = 0;
-//        size_t count     = 0;
-//        char* tmp        = a_str;
-//        char* last_comma = 0;
-//        char delim[2];
-//        delim[0] = a_delim;
-//        delim[1] = 0;
-//        
-//        /* Count how many elements will be extracted. */
-//        while (*tmp)
-//        {
-//            if (a_delim == *tmp)
-//            {
-//                count++;
-//                last_comma = tmp;
-//            }
-//            tmp++;
-//        }
-//        
-//        /* Add space for trailing token. */
-//        count += last_comma < (a_str + strlen(a_str) - 1);
-//        
-//        /* Add space for terminating null string so caller
-//         knows where the list of returned strings ends. */
-//        count++;
-//        
-//        result = malloc(sizeof(char*) * count);
-//    
-//        if (result)
-//        {
-//            size_t idx  = 0;
-//            char* token = strtok(a_str, delim);
-//            
-//            while (token)
-//            {
-//                assert(idx < count);
-//                *(result + idx++) = strdup(token);
-//                token = strtok(0, delim);
-//            }
-//            assert(idx == count - 1);
-//            *(result + idx) = 0;
-//        }
-//        return result;
-//}
-
 - (void)fillDataWithSelection:(NSMutableData*)data;
 {
   return [textView fillDataWithSelection:data];
@@ -329,7 +261,6 @@ char **strsplit(char* s, const char* delim, size_t* numtokens) {
 {
   [super touchesBegan:touches withEvent:event];
   
-  //fprintf(stdout, "touchesBegan: begin\n");
   if (!copyAndPasteEnabled) {
     return;
   }  
@@ -347,7 +278,6 @@ char **strsplit(char* s, const char* delim, size_t* numtokens) {
 {
   [super touchesMoved:touches withEvent:event];
 
-  //fprintf(stdout, "touchesMoved: begin\n");
   if (!copyAndPasteEnabled) {
     return;
   }  
@@ -361,7 +291,6 @@ char **strsplit(char* s, const char* delim, size_t* numtokens) {
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
   [super touchesEnded:touches withEvent:event];
 
-  //fprintf(stdout, "touchesEnded: begin\n");
   if (!copyAndPasteEnabled) {
     return;
   }
@@ -383,7 +312,6 @@ char **strsplit(char* s, const char* delim, size_t* numtokens) {
 
 - (void)setCopyPasteEnabled:(BOOL)enabled;
 {
-  //fprintf(stdout, "setCopyPasteEnabled: begin\n");
   copyAndPasteEnabled = enabled;
   // Reset any previous UI state for copy and paste
   UIMenuController *theMenu = [UIMenuController sharedMenuController];
@@ -410,14 +338,12 @@ static BOOL editable;
                 
 - (void)setFont:(UIFont*)font
 {
-  //fprintf(stdout, "setFont: begin\n");
   [self prompt];
   [textView setFont:font];
 }
 
 - (ColorMap*)colorMap
 {
-  //fprintf(stdout, "colorMap: begin\n");
   return [textView colorMap];
 }
 
