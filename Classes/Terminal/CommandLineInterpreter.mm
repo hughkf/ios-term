@@ -184,7 +184,7 @@ char buffer[1024];
         return buffer;
     }
 
-    else if (strcmp("ls", cmd_args[0]) == 0 && length < 2) {
+    else if (strcmp("ls", cmd_args[0]) == 0) {
         return [self ls : (length < 2)? NULL: cmd_args[1] ];
     }
 
@@ -206,14 +206,11 @@ char buffer[1024];
 
     else if (strcmp("cd", cmd_args[0]) == 0) {
 
-        if (cmd_args[1] == NULL) {
+        if (length < 2) {
             chdir(getenv("HOME"));
             
         } else if (chdir(cmd_args[1]) == -1) {
-                const char* format_str = " %s: no such directory\n";
-                buff = (char*) malloc(strlen(cmd_args[1]) + strlen(format_str));
-                sprintf(buff, format_str, cmd_args[1]);
-                return buff;
+            return [self string_literal:"\r\n No such directory!"];
         }
         return "";
     }
