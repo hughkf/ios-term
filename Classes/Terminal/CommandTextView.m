@@ -10,7 +10,7 @@
 
 -(BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text
 {
-    fprintf(stderr, "position: %d", range.location);
+    fprintf(stderr, "position: %lu", (unsigned long)range.location);
     if (range.location == 0)
         return YES;
     else

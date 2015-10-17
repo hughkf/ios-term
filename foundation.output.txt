@@ -1,9 +1,0 @@
-/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/CoreFoundation.framework/Versions/A/Headers/CFUserNotification.h
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift-migrator/sdk/MacOSX.sdk/System/Library/Frameworks/CoreFoundation.framework/Versions/A/Headers/CFUserNotification.h
-/Developer/SDKs/MacOSX10.5.sdk/System/Library/Frameworks/CoreFoundation.framework/Versions/A/Headers/CFUserNotification.h
-/Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/CoreFoundation.framework/Versions/A/Headers/CFUserNotification.h
-/System/Library/Frameworks/CoreFoundation.framework/Versions/A/Headers/CFUserNotification.h
-/Users/user1/Downloads/mac-os-x--sources/os-x-1010-sources/CF-1151.16/CFUserNotification.h
-/Volumes/MobileBackups/Backups.backupdb/Timmy/2015-10-02-121637/Macintosh HD/Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/CoreFoundation.framework/Versions/A/Headers/CFUserNotification.h
-/Volumes/MobileBackups/Backups.backupdb/Timmy/2015-10-02-121637/Macintosh HD/Developer/SDKs/MacOSX10.5.sdk/System/Library/Frameworks/CoreFoundation.framework/Versions/A/Headers/CFUserNotification.h
-/Volumes/MobileBackups/Backups.backupdb/Timmy/2015-10-02-121637/Macintosh HD/System/Library/Frameworks/CoreFoundation.framework/Versions/A/Headers/CFUserNotification.h

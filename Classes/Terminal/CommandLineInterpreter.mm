@@ -8,7 +8,8 @@
 #include <sys/stat.h>
 
 #include <sys/types.h>
-#include <sys/dir.h>
+//#include <sys/dir.h>
+#include <dirent.h>
 #include <sys/param.h>
 #include <stdlib.h>
 #include <string.h>
@@ -25,13 +26,13 @@ void die(char *msg)
     exit(0);
 }
 
-int file_select(const struct direct *entry)
-{
-    if ((strcmp(entry->d_name, ".") == 0) || (strcmp(entry->d_name, "..") == 0))
-        return (FALSE);
-    else
-        return (TRUE);
-}
+//int file_select(const struct direct *entry)
+//{
+//    if ((strcmp(entry->d_name, ".") == 0) || (strcmp(entry->d_name, "..") == 0))
+//        return (FALSE);
+//    else
+//        return (TRUE);
+//}
 
 // Stores the trimmed input string into the given output buffer, which must be
 // large enough to store the result.  If it is too small, the output is
@@ -49,8 +50,8 @@ size_t trimwhitespace(char *out, size_t len, const char *str)
     
     if(*str == 0)  // All spaces?
     {
-        *out = 0;
-        return 1;
+        if(out) *out = 0;
+        return 0;
     }
     
     // Trim trailing space
@@ -62,9 +63,10 @@ size_t trimwhitespace(char *out, size_t len, const char *str)
     out_size = (end - str) < len-1 ? (end - str) : len-1;
     
     // Copy trimmed string and add null terminator
-    memcpy(out, str, out_size);
-    out[out_size] = 0;
-    
+    if(out) {
+        memcpy(out, str, out_size);
+        out[out_size] = 0;
+    }
     return out_size;
 }
 
@@ -95,6 +97,51 @@ char *trimwhitespace(char *str)
 
 - (char *) ls: (char*) pathname
 {
+    int count = 0;
+    //struct direct **files;
+    char *path;
+    
+    if (pathname == NULL || strlen(pathname) == 0
+        || trimwhitespace(NULL, strlen(pathname), pathname) == 0) {
+        path = [self string_literal: "."];
+    }
+    else if( !getcwd(pathname, sizeof(pathname)) ) {
+        return [self string_literal: "No such file or directory\n"];
+    } else {
+        path = strdup(pathname);
+    }
+    
+    NSArray *contents = [self listFileAtPath : [NSString stringWithUTF8String: path ]];
+    //NSString * fileString = [contents componentsJoinedByString:@" "];
+    
+    //count = readdir_r(path, &files, file_select, alphasort);
+    if([contents count] == 0) return [self string_literal : " "];
+    
+    int total_chars_to_alloc = 0;
+    for (NSString* fname in contents) {
+        total_chars_to_alloc += fname.length;
+    }
+    //for (i=1; i<count+1; ++i)
+    //   total_chars_to_alloc += strlen(files[i-1]->d_name);
+    
+    assert(total_chars_to_alloc > 0);
+    char* tmp = (char* ) malloc( total_chars_to_alloc + count*strlen("\r\n") + count );
+    tmp[0] = '\0';
+    
+    for (NSString* fname in contents) {
+        const char* file_name = [fname UTF8String];
+        if (strlen(file_name) > 0 && total_chars_to_alloc > 0) {
+            strncat(tmp, "\r\n", strlen("\r\n"));
+            strncat(tmp, file_name, strlen(file_name));
+            fprintf(stderr, "tmp:\"%s\"", tmp);
+            total_chars_to_alloc -= (strlen("\r\n") + strlen(file_name));
+        }
+    }
+    return tmp;
+}
+
+/** - (char *) ls_old: (char*) pathname
+{
     int count,i;
     struct direct **files;
     char *path;
@@ -109,7 +156,7 @@ char *trimwhitespace(char *str)
         path = strdup(pathname);
     }
     
-    count = scandir(path, &files, file_select, alphasort);
+    count = readdir_r(path, &files, file_select, alphasort);
     if(count == 0) return [self string_literal : " "];
     
     int total_chars_to_alloc = 0;
@@ -129,6 +176,19 @@ char *trimwhitespace(char *str)
         }
     }
     return tmp;
+} */
+
+-(NSArray *)listFileAtPath:(NSString *)path
+{
+    int count;
+    
+    NSArray *directoryContent =
+        [[NSFileManager defaultManager] contentsOfDirectoryAtPath:path error:NULL];
+    for (count = 0; count < (int)[directoryContent count]; count++)
+    {
+        NSLog(@"File %d: %@", (count + 1), [directoryContent objectAtIndex:count]);
+    }
+    return directoryContent;
 }
 
 - (id)init: (TerminalView*)t {
