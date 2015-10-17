@@ -40,7 +40,7 @@
   BOOL copyAndPasteEnabled;
 }
 
-+ (int) getCurrentCommandLength;
++ (long) getCurrentCommandLength;
 + (BOOL) editable;
 + (const char*) getPrompt;
 - (VT100TextView*) textView;

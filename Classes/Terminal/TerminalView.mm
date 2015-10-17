@@ -24,7 +24,7 @@ static const char* kProcessExitedMessage =
 "Press any key to restart.\r\n";
 
 static const char* prompt = " $ ";
-static int currentCommandLength;
+static long currentCommandLength;
 
 - (void) writeToScreen:(const char*)msg {
     NSData* message = [NSData dataWithBytes:msg length:strlen(msg)];
@@ -170,7 +170,7 @@ static int currentCommandLength;
     }
 }
 
-+ (int) getCurrentCommandLength {
++ (long) getCurrentCommandLength {
     return currentCommandLength;
 }
 
@@ -205,7 +205,7 @@ static int currentCommandLength;
         size_t pieces = 0;
         char* orig = strdup(tmp); 
         char** args = strsplit(tmp, " ", &pieces);
-        const char* retString = [cmd interpretCommand: args : orig : pieces];
+        const char* retString = [cmd interpretCommand: args : orig : (int)pieces];
         if (retString != NULL){
             [self writeToScreen: retString];
         }
